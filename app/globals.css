@@ -1,32 +1,103 @@
+/* Reset margins and padding for a clean layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smoothly transition all properties to make hover effects and other changes appear smoother */
+*,
+*::before,
+*::after {
+  transition: all 0.3s ease;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 1.4;
-    margin: 0;
-    padding: 0;
+  font-family: 'Nunito', Arial, sans-serif; /* Consider using a modern sans-serif font */
+  font-size: 16px; /* Slightly larger base font size for readability */
+  line-height: 1.6;
+  color: #333; /* Soft black for main text color */
+  background-color: #f5f5f5; /* Light grey background */
+  padding: 20px;
 }
 
 header {
-    background-color: #42468C;
-    color: #F0F1F9;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 24px;
-    padding: 15px;
-    height: 35px;
-    margin-bottom: 15px;
+  background-color: #5d647b; /* Updated to a softer shade of blue */
+  color: #f0f1f9;
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem; /* Use rem for scalable typography */
+  padding: 1rem;
+  text-align: center; /* Centered header text */
 }
 
+/* Main content area styling */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 1em;
 }
 
 th, td {
-  border: 1px solid black;
-  padding: 8px;
+  padding: 0.75rem;
+  border: 1px solid #dddfe2;
   text-align: left;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #76a5af; /* A soft green/blue color */
+  color: white;
+  font-weight: 500; /* Slightly bolder header font */
+}
+
+td {
+  font-size: 0.875rem; /* Smaller font size for cells */
+  height: max-content; /* Allow table cells to naturally expand the row height */
+}
+
+/* Zebra striping for rows */
+tr:nth-child(even) {
+  background-color: #f8f9fa; /* A very light grey for even rows */
+}
+
+/* Hover effect for rows */
+tr:not(:first-child):hover {
+  background-color: #def2f1; /* A very soft blue for hover effect */
+}
+
+/* Responsive table container */
+.table-container {
+  overflow-x: auto;
+}
+
+/* Footer styles */
+footer {
+  background-color: #42468C;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  header,
+  main,
+  footer {
+    padding: 1rem;
+  }
+
+  header {
+    font-size: 1.2rem; /* Smaller font for smaller screens */
+  }
 }
