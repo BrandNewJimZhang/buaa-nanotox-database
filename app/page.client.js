@@ -1,32 +1,33 @@
-'use client';
+import Image from 'next/image';
+import Header from '@/components/header';
+import { useEffect, useState } from 'react';
 
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+async function getData() {
+  const res = await fetch('http://localhost:3000/api/getData');
+  const data = await res.json();
+  return data;
+}
 
-export default function Home() {
+export default async function HomePage() {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [filters, setFilters] = useState({});
 
   useEffect(() => {
-    // Function to fetch data from your API
-    const fetchData = () => {
-      axios.get('http://localhost:3000/api/getData')
-        .then(response => {
-          setData(response.data);
-          setFilteredData(response.data); // Initialize filtered data
-        })
-        .catch(error => {
-          console.error('Error fetching data:', error);
-        });
-    };
+    async function fetchData() {
+      try {
+        const fetchedData = await getData(); // Replace with your data fetching logic
+        setData(fetchedData);
+        setFilteredData(fetchedData); // Initialize filtered data
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
 
     fetchData();
   }, []);
 
   const handleFilterChange = (e, column) => {
-    console.log('Filtering:', column, e.target.value); // This should log whenever you type in an input
-
     const newFilters = { ...filters, [column]: e.target.value.toLowerCase() };
     setFilters(newFilters);
 
@@ -37,19 +38,13 @@ export default function Home() {
     );
 
     setFilteredData(newFilteredData);
-    
-    console.log('Filtered Data:', newFilteredData);
   };
 
-  const simpleInputChange = (e) => {
-    console.log('Input changed:', e.target.value);
-  };
-
-  // Extract column headers from the first data row
   const columnHeaders = data.length > 0 ? Object.keys(data[0]) : [];
 
   return (
     <>
+      <Header />
       <div>
         <h1>Data from MySQL:</h1>
         <table>
@@ -61,10 +56,7 @@ export default function Home() {
                   <input
                     type="text"
                     value={filters[header] || ''}
-                    onChange={(e) => {
-                      console.log(`Current value for ${header}:`, e.target.value); // This should also log whenever you type
-                      handleFilterChange(e, header);
-                    }}
+                    onChange={(e) => handleFilterChange(e, header)}
                   />
                 </th>
               ))}
@@ -82,5 +74,5 @@ export default function Home() {
         </table>
       </div>
     </>
-  );
+  )
 }
