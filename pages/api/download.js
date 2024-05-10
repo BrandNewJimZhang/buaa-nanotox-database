@@ -12,7 +12,6 @@ export default async function handler(req, res) {
 
         // Extract the selected IDs from the request body
         const { selectedIds } = req.body;
-        console.log("Received IDs for download:", selectedIds);
 
         // Check if selectedIds is valid
         if (!selectedIds || !Array.isArray(selectedIds) || selectedIds.length === 0) {
@@ -23,9 +22,6 @@ export default async function handler(req, res) {
         // Prepare and execute the SQL query
         const query = `SELECT * FROM original_dataset WHERE id IN (${selectedIds.map(() => '?').join(',')})`;
         const [rows] = await connection.execute(query, selectedIds);
-
-        console.log(selectedIds);
-        console.log("Query result:", rows); // Add this line to log the query result
 
         // Convert the result set to CSV format
         const csvData = convertToCSV(rows);

@@ -71,7 +71,7 @@ export default function MainTable() {
   };
 
   return (
-    <>
+    <div className='result-container right-container'>
       <div className="result-info">
         <p id='result-reminder'>
           <span>{filteredData.length}</span> result(s) found.
@@ -116,6 +116,6 @@ export default function MainTable() {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }

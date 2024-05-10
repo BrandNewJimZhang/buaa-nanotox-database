@@ -6,7 +6,8 @@ import MainTable from '@/components/main-table';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Sidebar from '@/components/sidebar';
-import HomeText from '@/components/home-text';
+import Upload from '@/components/upload';
+import ImageCalc from '@/components/image-calc';
 
 export default function Home() {
 
@@ -14,7 +15,9 @@ export default function Home() {
     <>
       <Header />
       <Sidebar />
-      <HomeText />
+      <div className='right-container'>
+        <Upload />
+      </div>
     </>
   );
 }

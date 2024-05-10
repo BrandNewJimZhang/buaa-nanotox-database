@@ -12,6 +12,24 @@
   transition: all 0.3s ease;
 }
 
+/* Targets the scrollbar itself */
+::-webkit-scrollbar {
+  width: 10px;  /* Width of the vertical scrollbar */
+  height: 8px;  /* Height of the horizontal scrollbar */
+}
+
+/* Targets the draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;  /* Scroll handle color */
+  border-radius: 10px;  /* Roundness of the scroll handle */
+}
+
+/* Targets the part of the scrollbar track where the handle isn't */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;  /* Color of the part of the track the handle doesn’t cover */
+  border-radius: 10px;  /* Roundness of the track */
+}
+
 body {
   font-family: 'Nunito', Arial, sans-serif; /* Consider using a modern sans-serif font */
   font-size: 16px; /* Slightly larger base font size for readability */
@@ -20,6 +38,7 @@ body {
   background-color: #f5f5f5; /* Light grey background */
   padding: 10px;
   margin: 0;
+  padding: 0;
   height: 100vh;
   overflow: hidden;
 }
@@ -29,9 +48,47 @@ header {
   color: #f0f1f9;
   font-family: 'Georgia', serif;
   font-size: 1.5rem; /* Use rem for scalable typography */
-  padding: 1rem;
+  height: 2em;
+  line-height: 2em;
   text-align: center; /* Centered header text */
-  margin-bottom: .6em;
+}
+
+/* sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: #6b7597; /* Updated to a softer shade of blue */
+  color: #f0f1f9;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+.sidebar a {
+  text-decoration: none; /* Remove underline from links */
+  color: #f0f1f9; /* White text color */
+}
+
+.sidebar li {
+  padding: 10px 20px; /* Padding inside each item */
+  border-bottom: 1px solid #40465e; /* Border between items */
+}
+
+.sidebar li:hover {
+  background-color: #40465e; /* Lighten the item on hover */
+  cursor: pointer; /* Change cursor to indicate clickable */
+}
+
+.right-container {
+  margin-left: 250px;
+  padding: 20px;
 }
 
 /* Main content area styling */
@@ -89,7 +146,7 @@ p#result-reminder span {
 /* Table styles */
 #table-container {
   overflow: scroll;
-  max-height: 80vh;
+  max-height: 85vh;
 }
 
 table {
@@ -144,6 +201,12 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 /* Responsive design */
