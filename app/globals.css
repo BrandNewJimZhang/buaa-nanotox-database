@@ -209,7 +209,24 @@ footer {
   margin-top: 20px;
 }
 
-/* Responsive design */
+/* Panther Database */
+div.panther-container {
+  border: 1px solid #666;
+  height: 88vh;
+  display: flex;
+}
+
+div.left-panther-container {
+  width: 20vw;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+div.right-panther-container {
+  width: 70vw;
+}
+
 @media screen and (max-width: 768px) {
   header,
   main,

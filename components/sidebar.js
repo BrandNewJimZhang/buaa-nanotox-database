@@ -13,6 +13,9 @@ export default function Sidebar() {
       <Link href="./calc">
         <li>Calculator</li>
       </Link>
+      <Link href="./panther-data">
+        <li>Panther Data</li>
+      </Link>
       </ul>
     </div>
   );
