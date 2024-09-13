@@ -43,7 +43,7 @@ export default async (req, res) => {
         const filePath = './public/uploads/' + req.file.filename; // Make sure this path matches the file location
         const pythonScriptPath = './public/python/process.py'; // Update with the actual path to your Python script
 
-        exec(`D:/miniconda3/python.exe ${pythonScriptPath} "${filePath}"`, (error, stdout, stderr) => {
+        exec(`python ${pythonScriptPath} "${filePath}"`, (error, stdout, stderr) => {
             if (error) {
                 console.error(`exec error: ${error}`);
                 return res.status(500).json({ error: 'Error executing Python script' });

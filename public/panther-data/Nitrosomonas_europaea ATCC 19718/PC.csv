@@ -1,0 +1,23 @@
+category,Number of genes,Percentage,Genes
+extracellular matrix protein (PC00102),1,0.0,0.0
+cytoskeletal protein (PC00085),25,0.002,0.002
+transporter (PC00227),793,0.049,0.049
+scaffold/adaptor protein (PC00226),30,0.002,0.002
+DNA metabolism protein (PC00009),196,0.012,0.012
+intercellular signal molecule (PC00207),7,0.0,0.0
+protein-binding activity modulator (PC00095),201,0.012,0.012
+viral or transposable element protein (PC00237),29,0.002,0.002
+RNA metabolism protein (PC00031),345,0.021,0.021
+calcium-binding protein (PC00060),5,0.0,0.0
+gene-specific transcriptional regulator (PC00264),151,0.009,0.009
+defense/immunity protein (PC00090),6,0.0,0.0
+translational protein (PC00263),117,0.007,0.007
+metabolite interconversion enzyme (PC00262),9041,0.554,0.554
+protein modifying enzyme (PC00260),3146,0.193,0.193
+"chromatin/chromatin-binding, or -regulatory protein (PC00077)",34,0.002,0.002
+transfer/carrier protein (PC00219),15,0.001,0.001
+membrane traffic protein (PC00150),7,0.0,0.0
+chaperone (PC00072),101,0.006,0.006
+structural protein (PC00211),77,0.005,0.005
+transmembrane signal receptor (PC00197),80,0.005,0.005
+No PANTHER category is assigned (UNCLASSIFIED),1923,0.118,0.118

@@ -1,0 +1,14 @@
+category,Number of genes,Percentage,Genes
+transporter activity (GO:0005215),611,0.033,0.031
+No PANTHER category is assigned (UNCLASSIFIED),7646,0.415,0.388
+translation regulator activity (GO:0045182),7,0.0,0.0
+transcription regulator activity (GO:0140110),74,0.004,0.004
+catalytic activity (GO:0003824),9125,0.496,0.463
+cytoskeletal motor activity (GO:0003774),1,0.0,0.0
+molecular function regulator activity (GO:0098772),98,0.005,0.005
+ATP-dependent activity (GO:0140657),341,0.019,0.017
+molecular transducer activity (GO:0060089),112,0.006,0.006
+molecular adaptor activity (GO:0060090),2,0.0,0.0
+antioxidant activity (GO:0016209),3,0.0,0.0
+structural molecule activity (GO:0005198),57,0.003,0.003
+binding (GO:0005488),1639,0.089,0.083

@@ -1,0 +1,18 @@
+category,Number of genes,Percentage,Genes
+cellular process (GO:0009987),9925,0.321,0.218
+reproductive process (GO:0022414),119,0.004,0.003
+No PANTHER category is assigned (UNCLASSIFIED),16502,0.533,0.362
+localization (GO:0051179),2232,0.072,0.049
+biological process involved in interspecies interaction between organisms (GO:0044419),49,0.002,0.001
+detoxification (GO:0098754),21,0.001,0.0
+reproduction (GO:0000003),121,0.004,0.003
+biological regulation (GO:0065007),2728,0.088,0.06
+response to stimulus (GO:0050896),4596,0.148,0.101
+homeostatic process (GO:0042592),368,0.012,0.008
+pigmentation (GO:0043473),4,0.0,0.0
+developmental process (GO:0032502),294,0.009,0.006
+multicellular organismal process (GO:0032501),230,0.007,0.005
+locomotion (GO:0040011),19,0.001,0.0
+metabolic process (GO:0008152),8325,0.269,0.183
+growth (GO:0040007),1,0.0,0.0
+immune system process (GO:0002376),64,0.002,0.001
