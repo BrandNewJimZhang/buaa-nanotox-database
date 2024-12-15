@@ -16,6 +16,9 @@ export default function Sidebar() {
       <Link href="./panther-data">
         <li>Panther Data</li>
       </Link>
+      <Link href="./ml">
+        <li>Machine Learning</li>
+      </Link>
       </ul>
     </div>
   );
